@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Please Enter Your Details For Out Dating Site!</h1>
+  <form name="input_form" method="post" action="" enctype="multipart/form-data">
+    <fieldset form="input_form">
+      <legend>
+        Your face
+      </legend>
+      <div>
+      <label for="avatar">Your Image:</label>
+      <input type="file" id="avatar" name="avatar" required />
+      </div>
+      <div>
+      <label for="preview">Image preview:</label>
+      <img id="preview" />
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>
+        Your general details
+      </legend>
+      <div>
+      <label for="name">Name:</label>
+      <input type="text" required id="name" name="name"/>
+      </div>
+      <div>
+      <label for="gender1">Gender:</label>
+      <input type="radio" name="gender" id="gender1" required value="Male"/>
+      <label for="gender1" class="radio">Male</label>
+      <input type="radio" name="gender" id="gender2" value="Female" />
+      <label for="gender2" class="radio">Female</label>
+      </div>
+      <div>
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" required />
+      </div>
+      <div>
+      <label for="birth">Date of birth:</label>
+      <input type="date" id="birth" name="birth"/>
+      </div>
+      <div>
+      <label for="color">Favorite color:</label>
+      <input type="color" id="color" name="color"/>
+      </div>
+      <div>
+      <label for="country">Which country:</label>
+      <select id="country" name="country">
+        <option value="no"></option>
+        <option value="Japan">Japan</option>
+        <option value="Russia">Russia</option>
+        <option value="USA">USA</option>
+        <option value="China">China</option>
+        <option value="Germany">Germany</option>
+      </select>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>
+        Your indicators
+      </legend>
+      <label for="height">Height:</label>
+      <label class="start">Short</label>
+      <input type="range" min="0" max="100" id="height" name="height" />
+      <label class="end">Tall</label>
+      <br />
+      <label for="salary">Salary:</label>
+      <label class="start">Poor</label>
+      <input type="range" min="0" max="100" id="salary" name="salary"/>
+      <label class="end">Rich</label>
+    </fieldset>
+    <fieldset>
+      <legend>
+        Your Contact Information
+      </legend>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required/>
+      <br />
+      <label for="tel">Tel:</label>
+      <input type="tel" id="tel" name="tel" />
+      <br />
+      <label for="address">Address:</label>
+      <textarea id="address" name="address">
+      </textarea>
+      <br />
+      <label for="contact1">Method to contact:</label>
+      <input type="checkbox" id="contact1" name="contact" value="email"/>
+      <label class="checkbox" for="contact1">Email</label>
+      <input type="checkbox" id="contact2" name="contact" value="wahtsapp"/>
+      <label class="checkbox" for="contact2">Whatsapp</label>
+      <input type="checkbox" id="contact3" name="contact" value="inapp"/>
+      <label class="checkbox" for="contact3" >In-App chat</label>
+    </fieldset>
+    <input type="submit" value="Submit" />
+  </form>
+</body>
+</html>
