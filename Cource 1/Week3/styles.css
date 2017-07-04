@@ -1,0 +1,19 @@
+div {
+    position:absolute;
+    width:500px;
+    height:500px
+}
+
+img {
+    position:absolute
+}
+
+#rightSide {
+    left: 500px;
+    border-left: 1px solid black
+}
+
+audio {
+    autoplay: false;
+    preload: auto
+}
