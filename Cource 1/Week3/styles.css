@@ -12,8 +12,3 @@ img {
     left: 500px;
     border-left: 1px solid black
 }
-
-audio {
-    autoplay: false;
-    preload: auto
-}
