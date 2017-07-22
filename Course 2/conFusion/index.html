@@ -9,8 +9,8 @@
      content must come *after* these tags -->
     <title>Ristorante Con Fusion</title>
     <!-- Bootstrap -->
-    <link href="bower_components\bootstrap\dist\css\bootstrap.min.css" rel="stylesheet">
-    <link href="bower_components\bootstrap\dist\css\bootstrap-theme.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -18,8 +18,8 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <link href="bower_components\font-awesome\css\font-awesome.min.css" rel="stylesheet">
-    <link href="bower_components\bootstrap-social\bootstrap-social.css" rel="stylesheet">
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap-social/bootstrap-social.css" rel="stylesheet">
 
     <link href="css/mystyles.css" rel="stylesheet">
 
@@ -40,7 +40,11 @@
           <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                   <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
-                  <li><a href="aboutus.html"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> About</a></li>
+                  <li>
+                      <a href="aboutus.html">
+                          <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> About
+                      </a>
+                  </li>
                   <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"
                          role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
@@ -69,35 +73,33 @@
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
         <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Login </h4>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Login </h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-inline">
+                      <div class="form-group">
+                        <label class="sr-only" for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Email" />
+                      </div>
+                      <div class="form-group">
+                        <label class="sr-only" for="password">Email address</label>
+                        <input type="password" class="form-control" id="password" placeholder="Password" />
+                      </div>
+                      <div class="form-group">
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox">Remember me
+                          </label>
+                        </div>
+                      </div>
+                        <button type="button" class="btn btn-info btn-sm">Sign in</button>
+                        <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
+                    </form>
+                </div>
             </div>
-            <div class="modal-body">
-                <form class="form-inline">
-                  <div class="form-group">
-                    <label class="sr-only" for="email">Email address</label>
-                    <input type="email" class="form-control" id="email" placeholder="Email" />
-                  </div>
-                  <div class="form-group">
-                    <label class="sr-only" for="password">Email address</label>
-                    <input type="password" class="form-control" id="password" placeholder="Password" />
-                  </div>
-                  <div class="form-group">
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox">Remember me
-                      </label>
-                    </div>
-                  </div>
-                    <button type="button" class="btn btn-info btn-sm">Sign in</button>
-                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
-                  </div>
-                </form>
-
-            </div>
-          </div>
         </div>
     </div>
     <div class="modal fade" id="modalForm" tabindex="-1" role="dialog" aria-labelledby="modalFormLabel">
@@ -132,18 +134,18 @@
               <div class="form-group">
                 <label for="smoking" class="col-sm-2 control-label">Section</label>
                 <div class="has-feedback col-sm-5">
-                  <div class="btn-group" data-toggle="buttons">
+                  <div class="btn-group" data-toggle="buttons" id="smoking">
                     <label class="btn btn-success active"><input type="radio" name="options" id="option1" autocomplete="off" checked>Non-Smoking
                     </label>
-                    <label class="btn btn-danger"><input type="radio" name="options" id="option1" autocomplete="off">Smoking
+                    <label class="btn btn-danger"><input type="radio" name="options" id="option2" autocomplete="off">Smoking
                     </label>
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <label for="datetime" class="col-sm-2 control-label">Date and time</label>
-                <div class="has-feedback col-sm-5">
-                  <input type="datetime" class="form-control" placeholder="Date"/>
+                <div class="has-feedback col-sm-5" id="datetime">
+                  <input type="date" class="form-control" placeholder="Date"/>
                   <span class="glyphicon glyphicon-calendar form-control-feedback" aria-hidden="true"></span>
                 </div>
                 <div class="has-feedback col-sm-5">
@@ -153,8 +155,8 @@
               </div>
               <div class="form-group">
                 <label for="reservbtn" class="col-sm-2 control-label"> </label>
-                <div class="col-sm-10">
-                  <button type="button" class="btn btn-primary">Reserve</button>
+                <div class="col-sm-10" id="reservbtn">
+                  <button type="button" class="btn btn-primary" >Reserve</button>
                   <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                 </div>
               </div>
@@ -184,7 +186,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-2">
                   <p style="padding:40px;"></p>
-                  <button class="btn btn-warning btn-block" type="button" id="reserveBtn">Reserve Table</a>
+                  <button class="btn btn-warning btn-block" type="button" id="reserveBtn">Reserve Table</button>
                 </div>
             </div>
         </div>
