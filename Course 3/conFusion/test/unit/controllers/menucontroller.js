@@ -1,10 +1,13 @@
 "use strict";
 describe('Controller: MenuController', function () {
     beforeEach(module('confusionApp'));
+    beforeEach(module(function ($urlRouterProvider) {
+        $urlRouterProvider.otherwise(function(){return false;});
+    }));
 
     var MenuController, scope, $httpBackend;
 
-    beforeEach(inject(function ($controller, _httpBackend_, $rootScope, menuFactory) {
+    beforeEach(inject(function ($controller, _$httpBackend_, $rootScope, menuFactory) {
 
         $httpBackend = _$httpBackend_;
 
