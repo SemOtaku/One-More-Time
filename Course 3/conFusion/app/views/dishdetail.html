@@ -23,6 +23,8 @@
                 </div>
             </div>
             <div class="col-xs-9 col-xs-offset-1">
+                <label for="commentOrder">Sort by:
+                    <input id="commentOrder" ng-model="ord"></label>
                 <ul class="media-list tab-pane fade in active">
                     <li class="media" ng-repeat="comment in dish.comments | orderBy: ord">
                         <blockquote>
