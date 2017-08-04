@@ -53,6 +53,10 @@ angular.module('confusionApp')
             
             $scope.channels = channels;
             $scope.invalidChannelSelection = false;
+            if ($scope.feedback.agree && ($scope.feedback.mychannel === "") && (!$scope.feedbackForm.approve.$pristine)) {
+                $scope.invalidChannelSelection = true;
+                console.log('incorrect');
+            };
                         
         }])
 
