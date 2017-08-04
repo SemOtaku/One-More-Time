@@ -44,6 +44,12 @@
           "comment": "Goood",
           "author": "Sem",
           "date": "2017-08-03T12:08:30.955Z"
+        },
+        {
+          "rating": 5,
+          "comment": "Nice!",
+          "author": "Sem",
+          "date": "2017-08-04T12:27:58.575Z"
         }
       ]
     },
@@ -215,5 +221,19 @@
       "description": "Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!"
     }
   ],
-  "feedback": []
+  "feedback": [
+    {
+      "mychannel": "tel",
+      "firstName": "Sem",
+      "lastName": "Khatov",
+      "agree": true,
+      "email": "semotaku@gmail.com",
+      "tel": {
+        "areaCode": "23423",
+        "number": "24342"
+      },
+      "comments": "23423",
+      "id": 1
+    }
+  ]
 }
