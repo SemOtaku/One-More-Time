@@ -5,3 +5,10 @@ Course 3/conFusion/dist/
 Course 3/json-server/public/
 .idea
 Course 4/node_modules/
+Course 4/conFusion/app/**/*.js
+Course 4/conFusion/app/global.d.ts
+Course 4/conFusion/node_modules
+Course 4/conFusion/tags
+Course 4/conFusion/platforms
+Course 4/conFusion/**/*.js.map
+Course 4/conFusion/**/*.metadata.json
