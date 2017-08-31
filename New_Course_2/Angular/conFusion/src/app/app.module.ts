@@ -21,6 +21,7 @@ import { PromotionService } from "./services/promotion.service";
 import { LeaderService} from "./services/leader.service";
 
 import { AppRouterModule } from "./app-router/app-router.module";
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AppRouterModule } from "./app-router/app-router.module";
     FooterComponent,
     HomeComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +45,7 @@ import { AppRouterModule } from "./app-router/app-router.module";
     AppRouterModule
   ],
   providers: [DishService, PromotionService, LeaderService],
+  entryComponents: [LoginComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
