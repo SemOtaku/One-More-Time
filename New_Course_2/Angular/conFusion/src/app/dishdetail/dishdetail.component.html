@@ -24,6 +24,9 @@
       </md-card-actions>
     </md-card>
   </div>
+  <div [hidden]="dish">
+    <md-spinner></md-spinner><h4>Loading . . . Please Wait</h4>
+  </div>
 
   <div fxFlex="40" *ngIf="dish">
     <h3>Comments</h3>
@@ -34,6 +37,9 @@
          <p md-line>-- {{commentary.author}} {{commentary.date | date}}</p>
        </md-list-item>
     </md-list>
+  </div>
+  <div [hidden]="dish">
+    <md-spinner></md-spinner><h4>Loading . . . Please Wait</h4>
   </div>
 
 </div>
