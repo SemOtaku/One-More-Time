@@ -24,6 +24,9 @@ import { AppRouterModule } from "./app-router/app-router.module";
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from "@angular/forms";
 
+import {baseURL} from './shared/baseurl';
+import {ProcessHTTPMsgService} from "./services/process-httpmsg.service";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +49,7 @@ import { ReactiveFormsModule } from "@angular/forms";
     AppRouterModule,
     ReactiveFormsModule
   ],
-  providers: [DishService, PromotionService, LeaderService],
+  providers: [DishService, PromotionService, LeaderService, {provide: 'BaseURL', useValue: baseURL}, ProcessHTTPMsgService],
   entryComponents: [LoginComponent],
   bootstrap: [AppComponent]
 })
