@@ -7,23 +7,28 @@ import { Observable} from "rxjs/Observable";
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/delay';
 import 'rxjs/add/observable/of';
+import {RestangularModule, Restangular} from "ngx-restangular";
 
+import {baseURL} from "../shared/baseurl";
+import {ProcessHTTPMsgService} from "./process-httpmsg.service";
+import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class PromotionService {
 
-  constructor() { }
+  constructor(private restangular: Restangular, private processHTTPMsgService: ProcessHTTPMsgService) { }
 
   getPromotions(): Observable<Promotion[]> {
-    return Observable.of(PROMOTIONS).delay(1000);
+    return this.restangular.all('promotions').getList;
   }
 
   getPromotion(id): Observable<Promotion> {
-    return Observable.of(PROMOTIONS.filter((promo) => (promo.id === id))[0]).delay(1000);
+    return this.restangular.one('promotions', id).get();
   }
 
   getFeaturedPromotion(): Observable<Promotion> {
-    return Observable.of(PROMOTIONS.filter((promo) => (promo.featured))[0]).delay(1000);
+    return this.restangular.all('promotions').getList({featured: true})
+      .map(promotions => promotions[0]);
   }
 
 }

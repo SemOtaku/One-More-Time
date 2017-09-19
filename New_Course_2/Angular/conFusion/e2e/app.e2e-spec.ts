@@ -33,6 +33,6 @@ describe('con-fusion App', () => {
     newSubmitButton.click();
 
     browser.pause();
-    
+
   });
 });

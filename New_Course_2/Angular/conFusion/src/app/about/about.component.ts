@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject} from '@angular/core';
 
 import {Leader} from "../shared/leader";
 
@@ -21,14 +21,16 @@ import {expand, flyInOut} from "../animations/app.animation";
 export class AboutComponent implements OnInit {
 
   leaders: Leader[];
+  errLeadMess: string;
 
   selectedLeader: Leader;
 
-  constructor(private leadersservice: LeaderService) { }
+  constructor(private leadersservice: LeaderService,
+              @Inject('BaseURL') private BaseURL) { }
 
   ngOnInit() {
     this.leadersservice.getLeaders()
-      .subscribe(leaders => this.leaders = leaders);
+      .subscribe(leaders => this.leaders = leaders, errmess => this.errLeadMess = <any>errmess);
   }
 
 }
