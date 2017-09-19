@@ -46,8 +46,16 @@
           "commentText": "Good pizza",
           "date": "2017-09-15T11:12:49.638Z",
           "comment": "Good pizza"
+        },
+        {
+          "author": "Test Author",
+          "rating": 5,
+          "commentText": "Test Comment",
+          "date": "2017-09-19T09:58:07.978Z",
+          "comment": "Test Comment"
         }
-      ]
+      ],
+      "commentText": null
     },
     {
       "id": 1,
