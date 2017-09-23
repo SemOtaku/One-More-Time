@@ -1,7 +1,7 @@
-import { Component, OnInit, Inject } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { Component, OnInit, Inject,ViewChild } from '@angular/core';
+import { FormBuilder, FormGroup, Validators, FormGroupDirective } from "@angular/forms";
 import { Feedback, ContactType} from "../shared/feedback";
-import {flyInOut} from "../animations/app.animation";
+import {flyInOut,expand} from "../animations/app.animation";
 import {FeedbackService} from "../services/feedback.service";
 
 @Component({
@@ -13,16 +13,20 @@ import {FeedbackService} from "../services/feedback.service";
     'style': 'display: block;'
   },
   animations: [
-    flyInOut()
+    flyInOut(),
+    expand()
   ]
 })
 export class ContactComponent implements OnInit {
 
   feedbackForm: FormGroup;
   feedback: Feedback;
-  fbService: FeedbackService;
-  feedbackCopy: null;
+  fbSubmitted: Feedback[];
+  feedbackCopy: Feedback;
   contactType = ContactType;
+  feedbackSubmissionInProgress: boolean = false;
+  displayFeedbackAfterPost: boolean = false;
+  errMess: string;
   formErrors = {
     'firstname': '',
     'lastname': '',
@@ -51,14 +55,16 @@ export class ContactComponent implements OnInit {
     },
   };
 
+  @ViewChild(FormGroupDirective) feedbackFormDirective;
 
-  constructor(private fb: FormBuilder,
-              feedbackservice: FeedbackService,
+
+  constructor(private feedbackservice: FeedbackService, private fb: FormBuilder,
               @Inject('BaseURL') private BaseURL) {
     this.createForm();
   }
 
   ngOnInit() {
+    this.displayFeedbackAfterPost = false;
   }
 
   createForm() {
@@ -94,10 +100,17 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit() {
+    this.feedbackSubmissionInProgress = true;
     this.feedback = this.feedbackForm.value;
-    console.log(this.feedback);
-    this.fbService.submitFeedback(this.feedback)
-      .subscribe();
+    this.feedbackCopy = this.feedback;
+//    console.log(this.feedback);
+    this.feedbackservice.submitFeedback(this.feedback)
+      .subscribe(fbSubmitted => {this.fbSubmitted = fbSubmitted;
+        this.feedbackSubmissionInProgress = false;
+        console.log(this.fbSubmitted);
+        this.displayFeedbackAfterPost = true;
+        setTimeout(()=>{this.displayFeedbackAfterPost=false}, 5000);
+      }, errmess => {this.fbSubmitted = null, this.errMess = <any>errmess;});
     this.feedbackForm.reset({
       firstname: '',
       lastname: '',
@@ -107,5 +120,6 @@ export class ContactComponent implements OnInit {
       contacttype: 'None',
       message: ''
     });
+    this.feedbackFormDirective.resetForm();
   }
 }

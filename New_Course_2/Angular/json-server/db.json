@@ -233,5 +233,206 @@
       "description": "Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!"
     }
   ],
-  "feedback": []
+  "feedback": [
+    {
+      "firstname": "Semyon",
+      "lastname": "Khatov",
+      "telnum": "12312",
+      "email": "semotaku@gmail.com",
+      "agree": true,
+      "contacttype": "Tel",
+      "message": "12312",
+      "id": 1
+    },
+    {
+      "firstname": "Semyon",
+      "lastname": "Khatov",
+      "telnum": "12312",
+      "email": "semotaku@gmail.com",
+      "agree": true,
+      "contacttype": "Tel",
+      "message": "12312312",
+      "id": 2
+    },
+    {
+      "firstname": "Semyon",
+      "lastname": "Khatov",
+      "telnum": "12312312",
+      "email": "semotaku@gmail.com",
+      "agree": true,
+      "contacttype": "None",
+      "message": "123123",
+      "id": 3
+    },
+    {
+      "firstname": "Semyon",
+      "lastname": "Khatov",
+      "telnum": "1231",
+      "email": "semotaku@gmail.com",
+      "agree": true,
+      "contacttype": "Tel",
+      "message": "1231231",
+      "id": 4
+    },
+    {
+      "firstname": "Sem",
+      "lastname": "Khatov",
+      "telnum": "12312",
+      "email": "semotaku@gmail.com",
+      "agree": false,
+      "contacttype": "None",
+      "message": "",
+      "id": 5
+    },
+    {
+      "firstname": "Semyon",
+      "lastname": "Khatov",
+      "telnum": "12312",
+      "email": "semotaku@gmail.com",
+      "agree": true,
+      "contacttype": "None",
+      "message": "1231231",
+      "id": 6
+    },
+    {
+      "firstname": "Semyon",
+      "lastname": "Khatov",
+      "telnum": "12312",
+      "email": "semotaku@gmail.com",
+      "agree": true,
+      "contacttype": "None",
+      "message": "",
+      "id": 7
+    },
+    {
+      "firstname": "Semyon",
+      "lastname": "Khatov",
+      "telnum": "1231231",
+      "email": "semotaku@gmail.com",
+      "agree": true,
+      "contacttype": "None",
+      "message": "",
+      "id": 8
+    },
+    {
+      "firstname": "Semyon",
+      "lastname": "Khatov",
+      "telnum": "12312",
+      "email": "semotaku@gmail.com",
+      "agree": true,
+      "contacttype": "None",
+      "message": "",
+      "id": 9
+    },
+    {
+      "firstname": "Semyon",
+      "lastname": "Khatov",
+      "telnum": "12312",
+      "email": "semotaku@gmail.com",
+      "agree": false,
+      "contacttype": "None",
+      "message": "",
+      "id": 10
+    },
+    {
+      "firstname": "Sem",
+      "lastname": "Khatov",
+      "telnum": "12312",
+      "email": "semotaku@gmail.com",
+      "agree": true,
+      "contacttype": "Tel",
+      "message": "12312",
+      "id": 11
+    },
+    {
+      "firstname": "Semyon",
+      "lastname": "Khatov",
+      "telnum": "1231231",
+      "email": "semotaku@gmail.com",
+      "agree": true,
+      "contacttype": "Tel",
+      "message": "12312",
+      "id": 12
+    },
+    {
+      "firstname": "Semyon",
+      "lastname": "Khatov",
+      "telnum": "123123",
+      "email": "semotaku@gmail.com",
+      "agree": true,
+      "contacttype": "Tel",
+      "message": "12312",
+      "id": 13
+    },
+    {
+      "firstname": "Semyon",
+      "lastname": "Khatov",
+      "telnum": "12312",
+      "email": "semotaku@gmail.com",
+      "agree": true,
+      "contacttype": "Email",
+      "message": "12312",
+      "id": 14
+    },
+    {
+      "firstname": "Semyon",
+      "lastname": "Khatov",
+      "telnum": "12312",
+      "email": "semotaku@gmail.com",
+      "agree": true,
+      "contacttype": "Tel",
+      "message": "12312",
+      "id": 15
+    },
+    {
+      "firstname": "Semyon",
+      "lastname": "Khatov",
+      "telnum": "12312",
+      "email": "semotaku@gmail.com",
+      "agree": true,
+      "contacttype": "Tel",
+      "message": "12312",
+      "id": 16
+    },
+    {
+      "firstname": "Semyon",
+      "lastname": "Khatov",
+      "telnum": "212312",
+      "email": "semotaku@gmail.com",
+      "agree": true,
+      "contacttype": "Tel",
+      "message": "12312",
+      "id": 17
+    },
+    {
+      "firstname": "Semyon",
+      "lastname": "Khatov",
+      "telnum": "231231",
+      "email": "semotaku@gmail.com",
+      "agree": true,
+      "contacttype": "Tel",
+      "message": "1231231",
+      "id": 18
+    },
+    {
+      "firstname": "Semyon",
+      "lastname": "Khatov",
+      "telnum": "12312",
+      "email": "semotaku@gmail.com",
+      "agree": true,
+      "contacttype": "Tel",
+      "message": "12312",
+      "id": 19
+    },
+    {
+      "firstname": "Semyon",
+      "lastname": "Khatov",
+      "telnum": "1231231",
+      "email": "semotaku@gmail.com",
+      "agree": true,
+      "contacttype": "Tel",
+      "message": "pt. Lenina 162a-45",
+      "id": 20
+    }
+  ]
 }
